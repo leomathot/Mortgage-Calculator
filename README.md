@@ -1,6 +1,7 @@
 # React + Vite App: Mortgage Calculator
 
-* Used Material UI
+Used Material UI:
+Typography, Stack, Slider, Radio, RadioGroup, FormControl, PieChart
 
 [See the site >>>](https://leomathot.github.io/Mortgage-Calculator/)
 

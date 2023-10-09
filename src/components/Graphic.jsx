@@ -1,6 +1,7 @@
 import React from "react"
 import { Typography, Stack } from "@mui/material"
 import { PieChart } from "@mui/x-charts/PieChart"
+import SquareRoundedIcon from '@mui/icons-material/SquareRounded'
 
 function formatAmount(x) {
   let twoDec = x.toFixed(2)
@@ -10,6 +11,9 @@ function formatAmount(x) {
   // return twoDec.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
   return twoDec.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
 }
+
+const gray = "#309080"
+const blue = "#30d0e0"
 
 const Graphic = ({ data }) => {
 
@@ -38,19 +42,20 @@ const Graphic = ({ data }) => {
           <Stack direction="row" gap={4}>
             <Stack>
               <Typography variant="subtitle1">Principle</Typography>
-              <Typography variant="h2">$ {formatAmount(homeValue)}</Typography>
+              <Typography variant="h2"><SquareRoundedIcon sx={{color: blue}} /> $ {formatAmount(homeValue)}</Typography>
             </Stack>
             <Stack>
               <Typography variant="subtitle1">Interest</Typography>
-              <Typography variant="h2">$ {formatAmount(totalInterestGenerated)}</Typography>
+              <Typography variant="h2"><SquareRoundedIcon sx={{color: gray}} /> $ {formatAmount(totalInterestGenerated)}
+              </Typography>
             </Stack>
           </Stack>
           <PieChart
             series={[
               {
                 data: [
-                  { id: 0, value: totalInterestGenerated, color: "#0078a0" },
-                  { id: 1, value: homeValue, color: "#00b890" },
+                  { id: 0, value: totalInterestGenerated, color: gray },
+                  { id: 1, value: homeValue, color: blue },
                 ],
                 innerRadius: 70,
                 outerRadius: 100,
@@ -66,7 +71,7 @@ const Graphic = ({ data }) => {
           />
           <Stack>
             <Typography variant="subtitle1">Total</Typography>
-              <Typography variant="h2">$ {formatAmount(homeValue + totalInterestGenerated)}</Typography>
+            <Typography variant="h2">$ {formatAmount(homeValue + totalInterestGenerated)}</Typography>
           </Stack>
         </Stack>
       </Stack>

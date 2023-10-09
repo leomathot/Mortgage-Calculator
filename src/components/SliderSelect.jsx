@@ -51,7 +51,7 @@ const SliderSelect = ({ data, setData }) => {
           amount={data.loanAmount} />
         <SliderComp 
           label="Interest Rate" 
-          min={0}  
+          min={0.1}  
           max={15} 
           defaultVal={data.interestRate} 
           value={data.interestRate}

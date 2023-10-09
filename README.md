@@ -1,6 +1,5 @@
-# React + Vite App
-# Used Material UI
-
+React + Vite App: Mortgage Calculator
+Used Material UI
 
 Project based on tutorial made by Joy Shaheb
 

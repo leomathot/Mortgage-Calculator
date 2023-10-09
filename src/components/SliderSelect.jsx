@@ -23,6 +23,7 @@ const SliderSelect = ({ data, setData }) => {
           unit="$"
           amount={data.homeValue} />
         <SliderComp 
+          label="Down Payment" 
           min={0} 
           max={data.homeValue} 
           defaultVal={data.downPayment}
@@ -32,10 +33,10 @@ const SliderSelect = ({ data, setData }) => {
             downPayment: value,
             loanAmount: data.homeValue - value
           })} 
-          label="Down Payment" 
           unit="$" 
           amount={data.downPayment} />
         <SliderComp 
+          label="Loan Amount" 
           min={0}  
           max={data.homeValue} 
           defaultVal={data.loanAmount} 
@@ -46,18 +47,21 @@ const SliderSelect = ({ data, setData }) => {
             loanAmount: value,
             downPayment: data.homeValue - value
           })} 
-          label="Loan Amount" 
           unit="$" 
           amount={data.loanAmount} />
         <SliderComp 
-          min={0}  
-          max={300} 
-          defaultVal={5} 
-          step={0.1} 
-          onChange={(e, value) => console.log(value)} 
           label="Interest Rate" 
+          min={0}  
+          max={15} 
+          defaultVal={data.interestRate} 
+          value={data.interestRate}
+          step={0.1} 
+          onChange={(e, value) => setData({
+            ...data,
+            interestRate: value
+          })} 
           unit="%" 
-          amount={45} />
+          amount={data.interestRate} />
       </Stack>
     </>
   )

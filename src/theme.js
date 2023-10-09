@@ -5,7 +5,7 @@ export const theme = createTheme({
     mode: 'dark',
     text: {
       secondary: "#808080"
-    }
+    },
   },
   typography: {
     h1: {

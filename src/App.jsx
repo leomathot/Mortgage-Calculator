@@ -11,9 +11,10 @@ function App() {
 
   const [data, setData] = useState({
     homeValue: 400000,
-    downPayment: 80000,
-    loanAmount: 320000,
-    loanTerm: 3000,
+    downPayment: 400000 * 0.2,
+    loanAmount: 400000 * 0.8,
+    loanTerm: 10,
+    interestRate: 5,
   })
 
   return (
@@ -21,14 +22,14 @@ function App() {
       <Navbar />
       <Container maxWidth="xl" sx={{ mt: 6 }}>
         <Grid container spacing={5}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={5} lg={6}>
             <Stack gap={3}>
-              <SliderSelect data={data} setData={setData}/>
-              <TenureSelect />
+              <SliderSelect data={data} setData={setData} />
+              <TenureSelect data={data} setData={setData} />
             </Stack>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Graphic />
+          <Grid item xs={12} md={7} lg={6}>
+            <Graphic data={data} />
           </Grid>
         </Grid>
       </Container>

@@ -26,7 +26,7 @@ const SliderComp = ({ min, max, defaultVal, step, onChange, value, label, unit, 
           aria-label="Default"
           valueLabelDisplay="auto"
           sx={{
-            color: "#00b3b3",
+            color: "#00c8a0",
           }} />
         <Stack direction="row" justifyContent="space-between">
           <Typography variant="caption" color="text.secondary">{unit} {displayAmount(min)}</Typography>

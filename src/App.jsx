@@ -22,13 +22,13 @@ function App() {
       <Navbar />
       <Container maxWidth="xl" sx={{ mt: 6 }}>
         <Grid container spacing={5}>
-          <Grid item xs={12} md={5} lg={6}>
+          <Grid item xs={12} md={6}>
             <Stack gap={3}>
               <SliderSelect data={data} setData={setData} />
               <TenureSelect data={data} setData={setData} />
             </Stack>
           </Grid>
-          <Grid item xs={12} md={7} lg={6}>
+          <Grid item xs={12} md={6}>
             <Graphic data={data} />
           </Grid>
         </Grid>

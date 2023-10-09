@@ -2,6 +2,15 @@ import React from "react"
 import { Typography, Stack } from "@mui/material"
 import { PieChart } from "@mui/x-charts/PieChart"
 
+function formatAmount(x) {
+  if (x >= 1000000) {
+    return `${(x/1000000)}M`
+  } else if (x >= 1000) {
+    return `${(x/1000)}K`
+  }
+  return x
+}
+
 const Graphic = ({ data }) => {
 
   const { homeValue, downPayment, loanAmount, loanTerm, interestRate } = data
@@ -17,7 +26,7 @@ const Graphic = ({ data }) => {
       <Stack gap={2} mb={8}>
         <Stack>
           <Typography variant="subtitle1">Monthly Payment</Typography>
-          <Typography variant="h1">$ {monthlyPayment.toFixed(2)}</Typography>
+          <Typography variant="h1">$ {formatAmount(monthlyPayment)}</Typography>
         </Stack>
         <Stack
           alignItems={"center"}
@@ -29,11 +38,11 @@ const Graphic = ({ data }) => {
           <Stack direction="row" gap={4}>
             <Stack>
               <Typography variant="subtitle1">Principle</Typography>
-              <Typography variant="h2">$ {homeValue.toFixed(2)}</Typography>
+              <Typography variant="h2">$ {formatAmount(homeValue)}</Typography>
             </Stack>
             <Stack>
               <Typography variant="subtitle1">Interest</Typography>
-              <Typography variant="h2">$ {totalInterestGenerated.toFixed(2)}</Typography>
+              <Typography variant="h2">$ {formatAmount(totalInterestGenerated)}</Typography>
             </Stack>
           </Stack>
           <PieChart
@@ -55,6 +64,9 @@ const Graphic = ({ data }) => {
             width={400}
             height={200}
           />
+          <Stack>
+            <Typography variant="subtitle1">Total: $ {formatAmount(homeValue + totalInterestGenerated)}</Typography>
+          </Stack>
         </Stack>
       </Stack>
     </>

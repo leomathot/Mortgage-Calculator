@@ -9,7 +9,7 @@ const TenureSelect = ({ data, setData }) => {
   return (
     <>
       <FormControl>
-        <Typography variant="subtitle1">Tenure</Typography>
+        <Typography variant="subtitle1">Tenure ( Years )</Typography>
         <Stack 
           border={1}
           borderRadius={3}
@@ -27,11 +27,11 @@ const TenureSelect = ({ data, setData }) => {
               loanTerm: value
             })}
           >
-            <FormControlLabel value={5} control={<Radio sx={{'&.Mui-checked': {color: "#00c8a0"}}} />} label="5 Years" labelPlacement="top" />
-            <FormControlLabel value={10} control={<Radio sx={{'&.Mui-checked': {color: "#00c8a0"}}} />} label="10 Years" labelPlacement="top" />
-            <FormControlLabel value={15} control={<Radio sx={{'&.Mui-checked': {color: "#00c8a0"}}} />} label="15 Years" labelPlacement="top" />
-            <FormControlLabel value={20} control={<Radio sx={{'&.Mui-checked': {color: "#00c8a0"}}} />} label="20 Years" labelPlacement="top" />
-            <FormControlLabel value={25} control={<Radio sx={{'&.Mui-checked': {color: "#00c8a0"}}} />} label="25 Years" labelPlacement="top" />
+            <FormControlLabel value={5} control={<Radio sx={{'&.Mui-checked': {color: "#00c8a0"}}} />} label="5 Y" labelPlacement="top" />
+            <FormControlLabel value={10} control={<Radio sx={{'&.Mui-checked': {color: "#00c8a0"}}} />} label="10 Y" labelPlacement="top" />
+            <FormControlLabel value={15} control={<Radio sx={{'&.Mui-checked': {color: "#00c8a0"}}} />} label="15 Y" labelPlacement="top" />
+            <FormControlLabel value={20} control={<Radio sx={{'&.Mui-checked': {color: "#00c8a0"}}} />} label="20 Y" labelPlacement="top" />
+            <FormControlLabel value={25} control={<Radio sx={{'&.Mui-checked': {color: "#00c8a0"}}} />} label="25 Y" labelPlacement="top" />
           </RadioGroup>
         </Stack>
       </FormControl>

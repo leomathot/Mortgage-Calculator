@@ -3,12 +3,12 @@ import { Typography, Stack } from "@mui/material"
 import { PieChart } from "@mui/x-charts/PieChart"
 
 function formatAmount(x) {
-  if (x >= 1000000) {
-    return `${(x/1000000)}M`
-  } else if (x >= 1000) {
-    return `${(x/1000)}K`
+  let twoDec = x.toFixed(2)
+  if (twoDec % 1 == 0) {
+    twoDec = parseInt(twoDec).toString()
   }
-  return x
+  // return twoDec.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  return twoDec.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
 }
 
 const Graphic = ({ data }) => {
@@ -65,7 +65,8 @@ const Graphic = ({ data }) => {
             height={200}
           />
           <Stack>
-            <Typography variant="subtitle1">Total: $ {formatAmount(homeValue + totalInterestGenerated)}</Typography>
+            <Typography variant="subtitle1">Total</Typography>
+              <Typography variant="h2">$ {formatAmount(homeValue + totalInterestGenerated)}</Typography>
           </Stack>
         </Stack>
       </Stack>

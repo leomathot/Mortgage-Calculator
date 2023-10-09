@@ -10,7 +10,7 @@ const Navbar = () => {
       <Container maxWidth="xl">
       <Toolbar>
         <Typography variant="h1" component="div">
-          Mortgage Calculator 02
+          Mortgage Calculator
         </Typography>
       </Toolbar>
       </Container>

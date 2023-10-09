@@ -1,11 +1,11 @@
-React + Vite App: Mortgage Calculator
+# React + Vite App: Mortgage Calculator
 
-Used Material UI
+* Used Material UI
 
-[See the site](https://leomathot.github.io/Mortgage-Calculator/)
+[See the site >>>](https://leomathot.github.io/Mortgage-Calculator/)
 
 Project based on tutorial made by Joy Shaheb
 
-- [Joy Shaheb GitHub Profile](https://github.com/JoyShaheb)
+- [Joy Shaheb's GitHub Profile](https://github.com/JoyShaheb)
 - [Joy Shaheb's Project Repository](https://github.com/JoyShaheb/mortgage-calculator-tutorial)
-- [YouTube Video](https://www.youtube.com/watch?v=uluphP4xXD8)
+- [Joy Shaheb's YouTube Video Tutorial](https://www.youtube.com/watch?v=uluphP4xXD8)

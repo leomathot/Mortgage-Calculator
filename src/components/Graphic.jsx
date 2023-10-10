@@ -1,6 +1,6 @@
-import React from "react"
-import { Typography, Stack } from "@mui/material"
-import { PieChart } from "@mui/x-charts/PieChart"
+import React from 'react'
+import { Typography, Stack } from '@mui/material'
+import { PieChart } from '@mui/x-charts/PieChart'
 import SquareRoundedIcon from '@mui/icons-material/SquareRounded'
 
 function formatAmount(x) {
@@ -8,12 +8,12 @@ function formatAmount(x) {
   if (twoDec % 1 == 0) {
     twoDec = parseInt(twoDec).toString()
   }
-  // return twoDec.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-  return twoDec.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
+  // return twoDec.replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  return twoDec.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
 }
 
-const gray = "#309080"
-const blue = "#30d0e0"
+const gray = '#309080'
+const blue = '#30d0e0'
 
 const Graphic = ({ data }) => {
 
@@ -29,24 +29,24 @@ const Graphic = ({ data }) => {
     <>
       <Stack gap={2}>
         <Stack>
-          <Typography variant="subtitle1">Monthly Payment</Typography>
-          <Typography variant="h1">$ {formatAmount(monthlyPayment)}</Typography>
+          <Typography variant='subtitle1'>Monthly Payment</Typography>
+          <Typography variant='h1'>$ {formatAmount(monthlyPayment)}</Typography>
         </Stack>
         <Stack
-          alignItems={"center"}
+          alignItems={'center'}
           border={1}
           borderRadius={3}
-          borderColor="#555555"
+          borderColor='#555555'
           padding={5}
           gap={4}>
-          <Stack direction="row" gap={4}>
+          <Stack direction='row' gap={4}>
             <Stack>
-              <Typography variant="subtitle1">Principle</Typography>
-              <Typography variant="h2"><SquareRoundedIcon sx={{color: blue}} /> $ {formatAmount(homeValue)}</Typography>
+              <Typography variant='subtitle1'>Principle</Typography>
+              <Typography variant='h2'><SquareRoundedIcon sx={{color: blue}} /> $ {formatAmount(homeValue)}</Typography>
             </Stack>
             <Stack>
-              <Typography variant="subtitle1">Interest</Typography>
-              <Typography variant="h2"><SquareRoundedIcon sx={{color: gray}} /> $ {formatAmount(totalInterestGenerated)}
+              <Typography variant='subtitle1'>Interest</Typography>
+              <Typography variant='h2'><SquareRoundedIcon sx={{color: gray}} /> $ {formatAmount(totalInterestGenerated)}
               </Typography>
             </Stack>
           </Stack>
@@ -70,8 +70,8 @@ const Graphic = ({ data }) => {
             height={200}
           />
           <Stack>
-            <Typography variant="subtitle1">Total</Typography>
-            <Typography variant="h2">$ {formatAmount(homeValue + totalInterestGenerated)}</Typography>
+            <Typography variant='subtitle1'>Total</Typography>
+            <Typography variant='h2'>$ {formatAmount(homeValue + totalInterestGenerated)}</Typography>
           </Stack>
         </Stack>
       </Stack>

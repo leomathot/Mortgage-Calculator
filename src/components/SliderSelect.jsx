@@ -1,13 +1,13 @@
 import React from 'react'
 import SliderComp from './common/SliderComp'
-import { Stack } from "@mui/material"
+import { Stack } from '@mui/material'
 
 const SliderSelect = ({ data, setData }) => {
   return (
     <>
       <Stack gap={1}>
         <SliderComp
-          label="Home Value"
+          label='Home Value'
           min={100000}
           max={1000000}
           defaultVal={data.homeValue}
@@ -20,10 +20,10 @@ const SliderSelect = ({ data, setData }) => {
             loanAmount: value * 0.8
           })
           }}
-          unit="$"
+          unit='$'
           amount={data.homeValue} />
         <SliderComp 
-          label="Down Payment" 
+          label='Down Payment' 
           min={0} 
           max={data.homeValue} 
           defaultVal={data.downPayment}
@@ -33,10 +33,10 @@ const SliderSelect = ({ data, setData }) => {
             downPayment: value,
             loanAmount: data.homeValue - value
           })} 
-          unit="$" 
+          unit='$' 
           amount={data.downPayment} />
         <SliderComp 
-          label="Loan Amount" 
+          label='Loan Amount' 
           min={0}  
           max={data.homeValue} 
           defaultVal={data.loanAmount} 
@@ -47,10 +47,10 @@ const SliderSelect = ({ data, setData }) => {
             loanAmount: value,
             downPayment: data.homeValue - value
           })} 
-          unit="$" 
+          unit='$' 
           amount={data.loanAmount} />
         <SliderComp 
-          label="Interest Rate" 
+          label='Interest Rate' 
           min={0.1}  
           max={15} 
           defaultVal={data.interestRate} 
@@ -60,7 +60,7 @@ const SliderSelect = ({ data, setData }) => {
             ...data,
             interestRate: value
           })} 
-          unit="%" 
+          unit='%' 
           amount={data.interestRate} />
       </Stack>
     </>

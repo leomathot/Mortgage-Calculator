@@ -6,13 +6,11 @@ import Container from '@mui/material/Container'
 
 const Navbar = () => {
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-      <Toolbar>
-        <Typography variant="h1" component="div">
+    <AppBar position='static'>
+      <Container maxWidth='lg' sx={{pt: 2, pb: 2}}>
+        <Typography variant='h1' component='div'>
           Mortgage Calculator
         </Typography>
-      </Toolbar>
       </Container>
     </AppBar>
   )

@@ -12,7 +12,7 @@ const Footer = () => {
               gap={3}
               justifyContent={'center'}
               alignItems={'center'}
-              padding={5}>
+              padding={2}>
               <Typography><a href='https://github.com/leomathot' target='_blank'>Leonardo Mathot</a></Typography>
               <Typography><a href='https://github.com/leomathot/Mortgage-Calculator' target='_blank'>Project Repository</a></Typography>
               <Typography><span>leomathot21@gmail.com</span></Typography>
@@ -23,7 +23,7 @@ const Footer = () => {
               gap={3}
               justifyContent={'center'}
               alignItems={'center'}
-              padding={5}>
+              padding={2}>
               <Typography>Project based on tutorial made by Joy Shaheb</Typography>
               <Stack justifyContent={'left'}>
                 <Typography variant='subtitle2'>

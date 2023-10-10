@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import SliderSelect from './components/SliderSelect'
 import TenureSelect from './components/TenureSelect'
 import Graphic from './components/Graphic'
+import Footer from './components/Footer'
 import Container from '@mui/material/Container'
 import { Grid, Stack } from '@mui/material'
 
@@ -20,7 +21,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Container maxWidth="xl" sx={{ mt: 6 }}>
+      <Container maxWidth="xl" sx={{ mt: 6, mb: 8}}>
         <Grid container spacing={5}>
           <Grid item xs={12} md={6}>
             <Stack gap={3}>
@@ -33,6 +34,7 @@ function App() {
           </Grid>
         </Grid>
       </Container>
+      <Footer />
     </>
   )
 }

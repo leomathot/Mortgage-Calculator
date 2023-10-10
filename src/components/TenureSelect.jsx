@@ -14,8 +14,7 @@ const TenureSelect = ({ data, setData }) => {
           border={1}
           borderRadius={3}
           borderColor="#555555"
-          pt={2} pb={1}
-          mb={2}>
+          pt={2} pb={1}>
           <RadioGroup
             row
             aria-labelledby="demo-radio-buttons-group-label"

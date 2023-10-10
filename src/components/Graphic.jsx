@@ -27,7 +27,7 @@ const Graphic = ({ data }) => {
 
   return (
     <>
-      <Stack gap={2} mb={8}>
+      <Stack gap={2}>
         <Stack>
           <Typography variant="subtitle1">Monthly Payment</Typography>
           <Typography variant="h1">$ {formatAmount(monthlyPayment)}</Typography>

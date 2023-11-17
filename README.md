@@ -4,7 +4,7 @@ Used Material UI:
 
 Typography, Stack, Slider, Radio, RadioGroup, FormControl, PieChart, Icons
 
-[See the site >>>](https://leomathot.github.io/Mortgage-Calculator/)
+[See the site >>>](https://leomathot.github.io/mortgage-calculator/)
 
 
 Project based on tutorial made by Joy Shaheb
